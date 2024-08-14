@@ -1,4 +1,55 @@
 .ListaRestaurantes {
   margin-top: 1.5rem;
   padding: 2rem;
+
+  form {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    background-color: #f2f6ff;
+    padding: 35px;
+
+    input,
+    select,
+    button {
+      cursor: pointer;
+      border: 1px solid gray;
+      padding: .2em;
+      border-radius: 6px;
+      font-size: large;
+      font-weight: 500;
+      background-color: white;
+    }
+
+    input {
+      cursor: default;
+    }
+
+    button:hover {
+      background-color: #f2f6ff;
+    }
+  }
+
+  .containerPaginacao {
+    margin-top: 1.5em;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    background-color: #f2f6ff;
+    padding: 35px;
+
+    button {
+      cursor: pointer;
+      border: 1px solid gray;
+      padding: .2em;
+      border-radius: 6px;
+      font-size: large;
+      font-weight: 500;
+      background-color: white;
+    }
+
+    button:hover {
+      background-color: #f2f6ff;
+    }
+  }
 }
