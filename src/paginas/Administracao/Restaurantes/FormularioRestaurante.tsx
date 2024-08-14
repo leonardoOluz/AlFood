@@ -1,10 +1,12 @@
-import { Button, TextField, Typography, Box } from "@mui/material";
+import {
+  Button, TextField, Typography, Box
+  } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import IRestaurante from "../../../interfaces/IRestaurante";
 import http from "../../../http";
 
-const FormularioReaturante = () => {
+const FormularioRestaurante = () => {
   const paramentros = useParams();
   const [nomeRestaurante, setNomeRestaurante] = useState('');
 
@@ -38,9 +40,9 @@ const FormularioReaturante = () => {
   }
 
   return (
-    <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexGrow: 1 }}>
       <Typography component="h1" variant="h6">Formulario de Restaurantes</Typography>
-      <Box component='form' onSubmit={aoSubmitForm}>
+      <Box component='form' onSubmit={aoSubmitForm} sx={{ width: '100%' }}>
         <TextField
           value={nomeRestaurante}
           onChange={e => setNomeRestaurante(e.target.value)}
@@ -49,10 +51,10 @@ const FormularioReaturante = () => {
           fullWidth
           required
         />
-        <Button sx={{marginTop: 1}} fullWidth type="submit" variant="outlined">Salvar</Button>
+        <Button sx={{ marginTop: 1 }} fullWidth type="submit" variant="outlined">Salvar</Button>
       </Box>
     </Box>
   )
 }
 
-export default FormularioReaturante;
+export default FormularioRestaurante;
